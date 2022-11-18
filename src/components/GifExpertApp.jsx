@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { AddCategory,GifsGrid } from './Categories';
 
 
-function App() {
+export const  GifExpertApp = () => {
 
   const [categories, setCategories] = useState([]);
 
@@ -15,7 +15,7 @@ function App() {
   
   return (
     <>
-      <h1>GifExpertApp</h1>
+      <h1>GifExper tApp</h1>
       <AddCategory onNewCategory={(event=>onAddCategorry(event))}/>
       {
         categories.map(category => (<GifsGrid key={category} category={category}></GifsGrid>))
@@ -24,4 +24,4 @@ function App() {
   )
 }
 
-export default App
+export default GifExpertApp
